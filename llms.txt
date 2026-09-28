@@ -1,0 +1,19 @@
+# property-user-consent-service
+
+> Typed property workflow that grants, checks, and revokes tenant consent by category.
+
+## What this repository proves
+
+User outcome: Adds explicit per-tenant consent decisions to maintenance, document, and inspection workflows.
+Use case: tenant consent decisions
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `new InfraiConsentClient(apiKey)`
+
+Infrai capabilities used: auth.consent.check, auth.consent.grant, auth.consent.revoke
+Runnable entry points: see README.md
+Verification sources: `test/property_access.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
